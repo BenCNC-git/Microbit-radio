@@ -1,6 +1,7 @@
 '''
 OC Robotique 2025
 Template pour librairie Protocole Réseau pour Micro:bit
+Anton est le meilleur
 
 Auteur·ice : Vincent Namy, Anton Broggini
 Version : 1.0
