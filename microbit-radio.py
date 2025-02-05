@@ -146,7 +146,8 @@ def send_msg(msgId:int, payload:List[int], userId:int, dest:int):
     '''
     
     global seqNum
-    pass # à compléter
+    message = int_to_bytes([1,2,3])
+    radio.send_bytes(message)
 
 def receive_msg(userId:int):
     '''
@@ -159,7 +160,7 @@ def receive_msg(userId:int):
             Returns:
                     msgRecu(Message): Objet Message contenant tous les paramètres du message
     '''
-    pass # à compléter
+    print(radio.receive_bytes())
 
 
 if __name__ == '__main__':
