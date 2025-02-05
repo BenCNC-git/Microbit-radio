@@ -2,7 +2,7 @@
 OC Robotique 2025
 Template pour librairie Protocole Réseau pour Micro:bit
 
-Auteur·ice : Vincent Namy, Anton Broggini, Benjamin Cianci
+Auteur·ice : Vincent Namy, Anton Broggini, Benjamin Cianci, Loïc Villaroge
 Version : 1.0
 Date : 29.01.25
 '''
