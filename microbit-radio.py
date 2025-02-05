@@ -18,7 +18,7 @@ Timeout = 300
 ackMsgId = 255
 
 #### Start radio module ####
-radio.config(channel=7, address=50)
+radio.config(channel=10, address=500)
 radio.on()
 
 
@@ -146,9 +146,7 @@ def send_msg(msgId:int, payload:List[int], userId:int, dest:int):
     '''
     
     global seqNum
-    global Message
     pass # à compléter
-    radio.send_bytes(Message)
 
 def receive_msg(userId:int):
     '''
