@@ -146,7 +146,7 @@ def send_msg(msgId:int, payload:List[int], userId:int, dest:int):
     '''
     
     global seqNum
-    msg = [msgId] + payload
+    msg = [msgId] + payload + dest
     radio.send_bytes(int_to_bytes(msg))
 
 def receive_msg(userId:int):
@@ -163,9 +163,10 @@ def receive_msg(userId:int):
     new_trame = radio.receive_bytes()
     if new_trame :
       trame = bytes_to_int(new_trame)
-      msgObj = Message(None, None, None, trame[0], trame[1], None)
+      msgObj = Message(None, trame[2], None, trame[0], trame[1], None)
       
-      return msgObj
+      if Message[1] == 1:
+          return msgObj
 
 
 if __name__ == '__main__':
