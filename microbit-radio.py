@@ -146,8 +146,8 @@ def send_msg(msgId:int, payload:List[int], userId:int, dest:int):
     '''
     
     global seqNum
-    message = int_to_bytes([1,2,3])
-    radio.send_bytes(message)
+    message = [msgId] + payload
+    radio.send_bytes(int_to_bytes(message))
 
 def receive_msg(userId:int):
     '''
