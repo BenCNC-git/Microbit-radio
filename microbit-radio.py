@@ -160,7 +160,8 @@ def receive_msg(userId:int):
             Returns:
                     msgRecu(Message): Objet Message contenant tous les paramètres du message
     '''
-    print(radio.receive_bytes())
+    recu = bytes_to_int(radio.receive_bytes())
+    print(recu)
     sleep(500)
 
 
