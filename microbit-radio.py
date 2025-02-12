@@ -175,7 +175,7 @@ if __name__ == '__main__':
     display.clear()
     while True:
         # Messages à envoyer
-        destId = 1
+        destId = 0
         if button_a.was_pressed():
             send_msg(1,[60],userId, destId)
             
