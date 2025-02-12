@@ -59,7 +59,7 @@ def bytes_to_int(bytesPayload:bytes):
     '''
     intPayload = []
     for i in bytesPayload:
-        intPayload.append(ord(bytes([i])))        
+        intPayload.append(ord(bytes([i])))
     return intPayload
 
 
@@ -163,7 +163,7 @@ def receive_msg(userId:int):
     new_trame = radio.receive_bytes()
     if new_trame :
       trame = bytes_to_int(new_trame)
-      msgObj = (None, None, None, trame[0], tram[1], None)
+      msgObj = (None, None, None, trame[0], trame[1], None)
       
       return msgObj
 
@@ -178,7 +178,6 @@ if __name__ == '__main__':
         if button_a.was_pressed():
             send_msg(1,[60],userId, destId)
             
-
                 
         # Reception des messages
         m = receive_msg(userId)        
