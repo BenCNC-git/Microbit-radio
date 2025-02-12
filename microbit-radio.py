@@ -181,6 +181,6 @@ if __name__ == '__main__':
                 
         # Reception des messages
         m = receive_msg(userId)        
-        if m and m.msgId==1 and m.playload == 60:
+        if m and m.msgId==1 and m.payload == 60:
             display.show(Image.SQUARE)
     
