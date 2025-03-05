@@ -16,6 +16,7 @@ seqNum = 0
 tryTime = 100
 Timeout = 300
 ackMsgId = 255
+acked = False
 
 #### Start radio module ####
 radio.config(channel=10, address=500)
@@ -125,6 +126,7 @@ def receive_ack(msg: Msg):
             Returns:
                     acked(bool): True si message acké, sinon False
     '''
+    global acked
     new_trame = radio.receive_bytes()
     if new_trame :
       trame = bytes_to_int(new_trame)
@@ -151,10 +153,11 @@ def send_msg(msgId:int, payload:List[int], userId:int, dest:int):
     '''
     
     global seqNum
+    global acked
     while acked == False:
         msg = [msgId] + payload + [dest] + [userId] + [seqNum]
         radio.send_bytes(int_to_bytes(msg))
-        seqNum +=1
+        seqNum += 1
 
 def receive_msg(userId:int):
     '''
