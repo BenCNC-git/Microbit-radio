@@ -146,7 +146,7 @@ def send_msg(msgId:int, payload:List[int], userId:int, dest:int):
     '''
     
     global seqNum
-    msg = [msgId] + [payload] + [dest] + [userId]
+    msg = [msgId] + payload + [dest] + [userId]
     radio.send_bytes(int_to_bytes(msg))
 
 def receive_msg(userId:int):
@@ -176,7 +176,7 @@ if __name__ == '__main__':
         # Messages à envoyer
         destId = 0
         if button_a.was_pressed():
-            send_msg(1,[60],userId, destId)
+            send_msg(1,[60],destId, userId)
             
                 
         # Reception des messages
