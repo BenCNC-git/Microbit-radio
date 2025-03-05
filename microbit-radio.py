@@ -176,7 +176,7 @@ if __name__ == '__main__':
         # Messages à envoyer
         destId = 0
         if button_a.was_pressed():
-            send_msg(1,[60],destId, userId)
+            send_msg(1,[60],userId, destId)
             
                 
         # Reception des messages
